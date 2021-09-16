@@ -47,8 +47,8 @@
             outlined
           >
           </v-autocomplete>
-          <v-btn>
-              
+          <v-btn color="primary">
+              Submit
           </v-btn>
         </div>
       </v-form>
