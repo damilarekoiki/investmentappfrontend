@@ -1,7 +1,11 @@
-<template></template>
+<template>
+
+</template>
 
 <script>
-export default {}
+export default {
+    layout: 'dashboardadmin'
+}
 </script>
 
 <style></style>

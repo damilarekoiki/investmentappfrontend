@@ -126,8 +126,8 @@ export default {
         text: 'Assets',
         subLinks: [
           {
-            text: 'View assets',
-            to: 'view-assets',
+            text: 'All assets',
+            to: 'all-assets',
           },
         ],
       },

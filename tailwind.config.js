@@ -6,6 +6,10 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      borderWidth: {
+        '1': '1px',
+        '0': '0',
+      },
       opacity: {
         '10': '0.1'
       },
