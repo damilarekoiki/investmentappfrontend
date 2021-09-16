@@ -1,7 +1,7 @@
 <template>
-    <main class="tw-p-10">
+    <section>
         Index
-    </main>
+    </section>
 </template>
 
 <script>
