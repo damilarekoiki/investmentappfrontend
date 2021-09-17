@@ -140,8 +140,8 @@ export default {
             to: 'create-model',
           },
           {
-            text: 'View models',
-            to: 'view-models',
+            text: 'All models',
+            to: 'all-models',
           },
         ],
       },
@@ -186,8 +186,8 @@ export default {
         text: 'Users',
         subLinks: [
           {
-            text: 'View users',
-            to: 'view-users',
+            text: 'All users',
+            to: 'all-users',
           },
         ],
       },
@@ -196,8 +196,8 @@ export default {
         text: 'Admins',
         subLinks: [
           {
-            text: 'View admins',
-            to: 'view-admins',
+            text: 'All admins',
+            to: 'all-admins',
           },
         ],
       },

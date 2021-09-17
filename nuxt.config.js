@@ -1,4 +1,7 @@
 export default {
+  loading: {
+    color: '#4caf50 ',
+  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 

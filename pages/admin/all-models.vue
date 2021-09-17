@@ -1,13 +1,13 @@
 <template>
-    <Assets />
+    <Models />
 </template>
 
 <script>
-    import Assets from "@/components/Assets"
+    import Models from "@/components/Models"
     export default {
         layout: 'dashboardadmin',
         components: {
-            Assets
+            Models
         }
     }
 </script>
