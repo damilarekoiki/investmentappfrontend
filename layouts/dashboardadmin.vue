@@ -126,6 +126,10 @@ export default {
         text: 'Assets',
         subLinks: [
           {
+            text: 'Create asset',
+            to: 'create-asset',
+          },
+          {
             text: 'All assets',
             to: 'all-assets',
           },
@@ -186,9 +190,14 @@ export default {
         text: 'Users',
         subLinks: [
           {
+            text: 'Create user',
+            to: 'create-user',
+          },
+          {
             text: 'All users',
             to: 'all-users',
           },
+          
         ],
       },
       {
