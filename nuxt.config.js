@@ -25,6 +25,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/phone-input',
+    '~/plugins/vuetify-money',
   ],
 
   auth: {
@@ -105,6 +106,7 @@ export default {
   build: {
     transpile: [
       'vue-tel-input-vuetify',
+      'vuetify-money',
     ],
   }
 }
