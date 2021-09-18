@@ -94,7 +94,7 @@
         </v-navigation-drawer>
 
         <v-main class="tw-bg-green-100 tw-bg-opacity-25 tw-h-full">
-            <main class="tw-p-10">
+            <main class="md:tw-p-6 tw-p-2">
                 <Nuxt />
             </main>
         </v-main>
