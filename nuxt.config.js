@@ -26,6 +26,8 @@ export default {
   plugins: [
     '@/plugins/phone-input',
     '~/plugins/vuetify-money',
+    '~/plugins/nairaFormat',
+    '~/plugins/numberFormat'
   ],
 
   auth: {
@@ -97,6 +99,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
