@@ -58,14 +58,20 @@
                 </div>
                 
             </div>
-            
+    <div>
+        <ContactUs />
+    </div>
         
     </div>
 </template>
 
 <script>
+import ContactUs from '@/components/ContactUs'
 export default {
 
+components: {
+    ContactUs
+  },
 }
 </script>
 

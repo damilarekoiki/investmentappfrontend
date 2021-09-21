@@ -19,6 +19,10 @@
             Dashboard
         </span>
 
+        <span class="tw-pr-3">
+            Contact Form
+        </span>
+
         <span>
         <v-btn color="success">
             Login
