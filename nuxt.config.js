@@ -27,7 +27,8 @@ export default {
     '@/plugins/phone-input',
     '~/plugins/vuetify-money',
     '~/plugins/nairaFormat',
-    '~/plugins/numberFormat'
+    '~/plugins/numberFormat',
+    '~/plugins/otpInput'
   ],
 
   auth: {
