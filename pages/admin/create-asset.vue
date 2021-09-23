@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="md:tw-flex">
-      <div class="md:tw-w-6/12 tw-w-full">  
+      <div class="md:tw-w-6/12 tw-w-full">
         <section>
           <span class="tw-text-2xl tw-font-bold"> Create Asset </span>
         </section>
@@ -49,7 +49,6 @@
                 placeholder="Enter the off take price..."
                 outlined
               ></v-text-field>
-
 
               <v-autocomplete
                 v-model="values"
@@ -119,7 +118,7 @@
       <div class="md:tw-w-6/12 tw-w-full">
         <main class="tw-pt-6 md:tw-px-16 tw-px-1">
           <v-card color="white" elevation="2" outlined>
-            <v-card-title>Recents models</v-card-title>
+            <v-card-title>Recents assets</v-card-title>
 
             <v-card-text>
               <div
@@ -272,7 +271,7 @@ export default {
     manage: ['Farmkonnect', 'Not Farmkonnect'],
     manage_values: [1, 2],
     purchase: ['Full Purchase', 'Part Purchase'],
-    purchase_values: [1,2],
+    purchase_values: [1, 2],
   }),
 }
 </script>
