@@ -14,9 +14,7 @@
         <v-btn color="success"> Login </v-btn>
       </span>
 
-      <span>
-        <Avatar />
-      </span>
+      
       <!-- 
 
         <v-btn icon>
