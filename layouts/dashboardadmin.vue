@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app clipped-left flat elevation="3" height="82px" color="white">
       <span class="tw-pr-2">
-        <v-app-bar-nav-icon color="#36454f"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon color="#36454f" @click="drawer = !drawer"></v-app-bar-nav-icon>
       </span>
 
       <v-toolbar-title>
@@ -18,7 +18,7 @@
       </span>
     </v-app-bar>
 
-    <v-navigation-drawer app clipped flat color="white">
+    <v-navigation-drawer app clipped flat color="white" v-model="drawer">
       <v-list nav dense class="tw-mt-5">
         <div
           v-for="(link, i) in links"
@@ -101,6 +101,7 @@
 <script>
 export default {
   data: () => ({
+    drawer: true,
     navbarlist: [
       { icon: 'mdi-view-dashboard', text: 'Dashboard', route: '/' },
       { icon: 'mdi-upload', text: 'Upload', route: '/upload' },

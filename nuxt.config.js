@@ -35,7 +35,7 @@ export default {
     strategies: {
       'localAdmin': {
         provider: 'laravel/jwt',
-        url: 'http://127.0.0.1:8000/api/auth/admin',
+        url: '192.168.100.27:8000/api/auth/admin',
         endpoints: {
           login: { url: '/login', method: 'post'},
           refresh: { url: '/refresh', method: 'post' },
@@ -57,7 +57,7 @@ export default {
       },
       'localUser': {
         provider: 'laravel/jwt',
-        url: 'http://127.0.0.1:8000/api/auth/user',
+        url: '192.168.100.27:8000/api/auth/user',
         endpoints: {
           login: { url: '/login', method: 'post'},
           refresh: { url: '/refresh', method: 'post' },

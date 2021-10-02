@@ -70,11 +70,14 @@
                 outlined
                 v-model="selectedModels"
                 :items="models"
+                multiple
                 no-data-text="Select or add new"
                 item-text="model_name" item-value="unique_id"
                 :rules="[
-                    (v) => !!v || 'This field is required'
+                    (v) => !!v || 'This field is required',
+                    (v) => selectedModels.length > 0 || 'Please select a model'
                 ]"
+                return-object
               >
               </v-autocomplete>
               <v-text-field
@@ -242,7 +245,7 @@ export default {
     runningCost: '',
     outputPerSquareMeter: '',
     offtakePrice: '',
-    selectedModels: '',
+    selectedModels: [],
     minimumOwnershipPerSquareMeter: '',
     description: '',
     procurementPeriod: '',
@@ -262,8 +265,8 @@ export default {
       this.submitting = true
       let url = this.$store.state.apiStore.admin.addAsset
 
-      this.selectedModels = this.selectedModels.map(({unique_id}) => unique_id)
-      this.purchaseType = this.purchaseType.map(({id}) => id)
+      this.selectedModels = this.selectedModels.map(({unique_id}) => unique_id);
+      this.purchaseType = this.purchaseType
 
       let formData = new FormData();
       formData.append('asset_name', this.name)
@@ -335,6 +338,15 @@ export default {
         return "Enter a partner"
       }
       return '';
+    }
+  },
+  watch: {
+    selectedModels(val){
+      let d= val.map((e) => e)
+      console.log(d);
+    },
+    purchaseType(val){
+      console.log(val);
     }
   }
 }

@@ -72,6 +72,71 @@
 <script>
 import ContactUs from '@/components/ContactUs'
 export default {
+    components: {
+        ContactUs
+    },
+    data() {
+        return {
+            email: '',
+            password: '',
+            error: {
+                email: '',
+                password: '',
+            },
+            
+            isSubmitting: false,
+            errorMessage: '',
+        }
+    },
+    auth: {
+        login: false,
+    },
+    methods: {
+        async login(){
+            if(!this.$refs.form.validate()) return ;
+            if(this.isSubmitting) return;
+            this.isSubmitting = true
+            let userDetails = {email: this.email, password: this.password};
+            try {
+
+                let response = await this.$auth.loginWith('localAdmin', { data: userDetails });
+                let data = await response.data;
+
+                console.log(data);
+
+                this.isSubmitting = false;
+
+                if(data.status){
+                    if(data.status == 'error'){
+                        this.errorMessage = data.message
+                        return ;
+                    }
+                }
+
+                if(this.$auth.loggedIn){
+                    setTimeout(() => {
+                        this.$router.push('/admin');
+                    }, 50);
+                }
+
+            } catch (error) {
+            }
+        }
+    },
+    watch: {
+        email(val){
+            this.errorMessage = ""
+        },
+        password(val){
+            this.errorMessage = ""
+        }
+    },
+    computed: {
+        buttonDisability(){
+            return !(this.email && /.+@.+\..+/.test(this.email)  && !this.isSubmitting)
+        }
+    },
+    }
   components: {
     ContactUs,
   },
