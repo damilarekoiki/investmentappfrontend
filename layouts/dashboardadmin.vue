@@ -134,6 +134,10 @@ export default {
             text: 'All assets',
             to: 'all-assets',
           },
+          {
+            text: "Update assets",
+            to: 'update-assets'
+          }
         ],
       },
       {
@@ -147,6 +151,10 @@ export default {
           {
             text: 'All models',
             to: 'all-models',
+          },
+          {
+            text: "Edit models",
+            to: "update-models"
           },
         ],
       },

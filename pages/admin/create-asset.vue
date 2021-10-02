@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="md:tw-flex">
-      <div class="md:tw-w-6/12 tw-w-full">  
+      <div class="md:tw-w-6/12 tw-w-full">
         <section>
           <span class="tw-text-2xl tw-font-bold"> Create Asset </span>
         </section>
@@ -62,7 +62,6 @@
                       (v) => !!v || 'This field is required'
                   ]"
               />
-
 
               <v-autocomplete
                 placeholder="Choose model"
