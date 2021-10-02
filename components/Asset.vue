@@ -3,18 +3,17 @@
         max-width="400"
     >
         
-        <ImageEl src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" height="200" />
+        <ImageEl :src="`${$store.state.apiStore.fileStorage}/${image}`" height="200" />
 
         <v-card-subtitle class="pb-0">
-            Land at Ikeja
+            {{name}}
         </v-card-subtitle>
 
         <v-card-text class="text--primary">
-            <div>&#8358; 20,000</div>
-            <div>20km</div>
+            <div>{{price | nairaFormat}}</div>
+            <div>{{size}}</div>
             <div>
-                Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudia
+                {{description}}
             </div>
         </v-card-text>
 
@@ -32,6 +31,7 @@
 <script>
     import ImageEl from "@/components/ImageEl.vue"
     export default {
+        props: ['name', 'image', 'price', 'size', 'description'],
         components:{
             ImageEl
         }
